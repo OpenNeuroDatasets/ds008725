@@ -1,0 +1,31 @@
+# Memtrain MEG: epoched, temporally binned arrays
+
+One file per participant and session, holding the single-trial arrays the manuscript
+analyses ran on. These are the same files published as MEG_epochs/ on OSF
+(https://osf.io/q84bz/); only the names differ, to follow BIDS derivative conventions. The
+contents are byte-identical, so an MD5 of either copy matches the other.
+
+## Files
+- Layout: sub-XX/ses-Y/meg/sub-XX_ses-Y_task-objectviewing_desc-bin10_epo.fif
+- Original name on OSF: sub-XX_ses-Y_tsss_bp0.03-330_bin10_epo.fif
+- Format: MNE-Python Epochs (FIFF). Load with mne.read_epochs().
+- Array per file: (n_trials, 306 channels, 110 time points), float32.
+- 2880 trials for most sessions (96 objects, 30 repetitions); a few sessions contain
+  slightly fewer.
+
+## Processing
+tSSS denoising, band-pass 0.03 to 330 Hz, epochs from -100 to 1000 ms relative to
+stimulus onset, baseline corrected on the -100 to 0 ms window, then averaged within
+non-overlapping 10 ms bins. That leaves 110 bins at 100 Hz spanning -0.10 to 0.99 s.
+The 306 MEG channels are kept unscaled in physical units, so magnetometer values are
+numerically much larger than gradiometer values; normalise before combining sensor
+types. No trial or artifact rejection was applied.
+
+## Trial labels
+Object identity is in the event codes:
+
+    labels    = 2**15 - ep.events[:, 2] - 1    # 0 to 95
+    trained   = labels < 48
+    untrained = labels >= 48
+
+The same trials are flagged analysis_include = 1 in the raw dataset's events.tsv.

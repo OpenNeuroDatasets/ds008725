@@ -1,0 +1,18 @@
+{
+    "Name": "Memtrain MEG: epoched, temporally binned arrays",
+    "BIDSVersion": "1.9.0",
+    "DatasetType": "derivative",
+    "License": "CC0",
+    "GeneratedBy": [
+        {
+            "Name": "mne-python",
+            "Description": "MaxFilter tSSS, band-pass 0.03 to 330 Hz, epoched -100 to 1000 ms around stimulus onset, baseline corrected on -100 to 0 ms, then averaged within non-overlapping 10 ms bins to give 110 time points at 100 Hz. The 306 MEG channels are kept in physical units with no scaling or whitening, and no trial rejection was applied."
+        }
+    ],
+    "SourceDatasets": [
+        {
+            "URL": "https://osf.io/q84bz/",
+            "Description": "The same files are published as MEG_epochs/ on OSF project q84bz."
+        }
+    ]
+}

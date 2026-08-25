@@ -1,0 +1,17 @@
+{
+    "age": {
+        "Description": "Age of the participant at the pre-training session",
+        "Units": "years"
+    },
+    "sex": {
+        "Description": "Self-reported sex",
+        "Levels": {
+            "M": "male",
+            "F": "female"
+        }
+    },
+    "education_years": {
+        "Description": "Completed years of formal education",
+        "Units": "years"
+    }
+}
