@@ -28,5 +28,5 @@
             "Description": "Raw FIFF recordings converted to BIDS and anonymised with a single dataset-wide date offset."
         }
     ],
-    "DatasetDOI": "doi:10.18112/openneuro.ds008725.v1.0.0"
+    "DatasetDOI": "doi:10.18112/openneuro.ds008725.v1.0.1"
 }
