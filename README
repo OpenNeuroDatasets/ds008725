@@ -34,8 +34,8 @@ events.tsv lists every stimulus presentation and every block marker.
 - trial_type is trained, untrained, catch, block_onset or block_end.
 - object_id is the 0 to 95 object identity. 0 to 47 are trained objects, 48 to 95 are
   untrained.
-- value is the STI101 code. Stimulus codes are 2**15 minus the image number, so
-  object_id = 2**15 - value - 1.
+- value is the STI101 code. Stimulus codes are 2^15 minus the image number, so
+  object_id = 2^15 - value - 1.
 - response rows are button presses recorded on the second trigger channel. They were
   made during catch detection and are the only behavioural measure collected in the
   scanner. The epoched dataset on OSF does not contain them.
