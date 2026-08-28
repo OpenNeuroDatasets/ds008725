@@ -1,16 +1,16 @@
 {
-    "Name": "Mnemonic discrimination training changes human visual population code representations supporting behavior (MEG)",
+    "Name": "Memtrain MEG",
     "BIDSVersion": "1.9.0",
     "DatasetType": "raw",
     "License": "CC0",
     "Authors": [
         "Rong, Boyan",
         "Iliopoulos, Panagiotis",
-        "D\u00fczel, Emrah",
+        "Düzel, Emrah",
         "Cichy, Radoslaw Martin"
     ],
-    "Acknowledgements": "We thank the HPC service of IKND, Otto-von-Guericke University Magdeburg, and FUB-IT, Freie Universit\u00e4t Berlin, for computing time and data storage, all participants for their efforts, and Lou Wenke and Sophia Enkler for help in behavioral data acquisition.",
-    "HowToAcknowledge": "Please cite: Rong, B., Iliopoulos, P., D\u00fczel, E. & Cichy, R. M. Mnemonic discrimination training changes human visual population code representations supporting behavior (in preparation).",
+    "Acknowledgements": "We thank the HPC service of IKND, Otto-von-Guericke University Magdeburg, and FUB-IT, Freie Universität Berlin, for computing time and data storage, all participants for their efforts, and Lou Wenke and Sophia Enkler for help in behavioral data acquisition.",
+    "HowToAcknowledge": "Please cite: Rong, B., Iliopoulos, P., Düzel, E. & Cichy, R. M. Mnemonic discrimination training changes human visual population code representations supporting behavior (in preparation).",
     "Funding": [
         "German Research Foundation (DFG) grant INST 272/297-2 (R.M.C.)",
         "European Research Council (ERC) Consolidator Grant ERC-CoG-2024101123101"
