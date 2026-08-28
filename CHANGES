@@ -2,5 +2,7 @@
 
   - Initial release: 62 raw MEG recordings from 31 participants,
     anonymised and converted to BIDS.
+1.0.1 2026-08-28
+  - typo-fix
 1.0.0 2026-08-28
   - First-version
