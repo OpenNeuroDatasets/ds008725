@@ -1,15 +1,14 @@
 # Memtrain MEG: raw recordings
 
 Raw MEG recorded while participants viewed object images before and after eight weeks
-of at-home mnemonic discrimination training. These are the unprocessed continuous
-recordings behind the decoding and neural-manifold analyses reported in Rong et al.
+of web-based mnemonic discrimination training. These are the unprocessed continuous
+recordings behind the analyses reported in Rong et al.
 (in preparation).
 
 ## What is here
 - 31 participants, 2 sessions each, giving 62 recordings.
-- ses-1 is the pre-training session, ses-2 the post-training session. The gap between
-  them is 54 to 110 days (median 71).
-- One continuous recording per session, 68 to 99 minutes long, stored as split FIFF
+- ses-1 is the pre-training session, ses-2 the post-training session. 
+- One continuous recording per session, stored as split FIFF
   files (split-01, split-02, ...). MNE-Python reads the chain from split-01.
 - No filtering, no MaxFilter, no epoching has been applied. The only header change is
   anonymisation.
@@ -17,15 +16,6 @@ recordings behind the decoding and neural-manifold analyses reported in Rong et 
 ## Recording
 - Elekta Neuromag TRIUX, 306 MEG channels (204 planar gradiometers, 102 magnetometers).
 - 1000 Hz sampling, acquisition band-pass 0.03 to 330 Hz, 50 Hz line frequency.
-- Two auxiliary bipolar channels per session. In 47 of the 62 sessions both were
-  recorded as EOG; in the remaining 15 one was labelled ECG. channels.tsv states the
-  actual composition for each recording.
-- Continuous head position monitoring was on. Eight signal-space projection vectors
-  computed at acquisition are stored in the FIFF header and are not applied.
-- Head shape digitisation is included (416 to 860 points per session).
-- MaxMovement in each sidecar is the largest distance the head origin moved from its
-  starting position during that recording, taken from the continuous head position
-  estimates.
 
 ## Task
 Passive viewing with an orthogonal target-detection task. 96 object images per session,
@@ -49,12 +39,6 @@ events.tsv lists every stimulus presentation and every block marker.
 - response rows are button presses recorded on the second trigger channel. They were
   made during catch detection and are the only behavioural measure collected in the
   scanner. The epoched dataset on OSF does not contain them.
-- analysis_include marks the presentations that entered the manuscript analyses. It is
-  0 for catch trials and for the small number of trials in blocks that were aborted and
-  restarted. Selecting analysis_include == 1 reproduces the trial set of the epoched
-  dataset on OSF exactly.
-- Most sessions contribute 2880 analysed trials (1440 trained, 1440 untrained). A few
-  contain slightly fewer.
 
 ## Anonymisation
 Participant identifiers and birth dates were removed from the FIFF headers, and every
