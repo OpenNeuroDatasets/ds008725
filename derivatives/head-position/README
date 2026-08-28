@@ -1,9 +1,0 @@
-# Memtrain MEG: continuous head position
-
-One file per recording, holding head position over time estimated from the continuous
-HPI coils. Load with mne.chpi.read_head_pos().
-
-Columns are time, three rotation quaternion components, the head origin in device
-coordinates (metres), goodness of fit, error and velocity. The MaxMovement value in
-each raw MEG sidecar is the largest distance the head origin moved from its starting
-position, computed from these files.
