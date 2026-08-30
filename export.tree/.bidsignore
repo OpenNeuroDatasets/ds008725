@@ -1,5 +1,0 @@
-# macOS sidecar files created on exFAT volumes
-._*
-.DS_Store
-# lock files written by mne-bids during conversion
-*.lock
